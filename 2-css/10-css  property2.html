@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSSPROPERTY</title>
+    <style>
+        body{
+            height: 300vh ;
+        }
+       .bg{
+           height: 100vh;
+           background: #a5a5a5 url("image/anime2.jpg") no-repeat top right fixed;
+           background-size: 100px;
+           padding: 20px;
+       }
+
+       .heading{
+           box-sizing: border-box;
+           border: 1px solid black;
+           width: 300px;
+           min-height: 200px;
+
+       }
+       .heading h1{
+           background-color: var(--color);
+       }
+       :root{
+           --color: #f3f9;
+           --background: #a75a55;
+       }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="heading">
+    <h1>This is heading</h1>
+    <p style="background-color: var(--background)">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem molestias nemo officiis placeat, quam vero voluptatibus? Aspernatur eaque facere fugit quod repudiandae. Aliquam aliquid animi, ducimus ipsum nesciunt quibusdam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi cupiditate, deleniti doloremque esse labore minima modi, natus omnis, pariatur quam voluptatum. Dicta distinctio ipsam iste laboriosam nostrum sequi!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi cupiditate, deleniti doloremque esse labore minima modi, natus omnis, pariatur quam voluptatum. Dicta distinctio ipsam iste laboriosam nostrum sequi!
+
+    </p>
+</div>
+
+</body>
+</html>

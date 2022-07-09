@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arry method</title>
+</head>
+<body>
+<h4>Most Popular Array Methods</h4>
+<ul>
+    <li>* map [loop ပတ်]</li>
+    <li>* filter [စစ်ထုတ်]</li>
+    <li>* reduce [စုစုပေါင်း]</li>
+</ul>
+<br>
+//array copy
+<br>
+<br>
+//array ပုံစံပြောင်း
+<br>
+<br>
+// array အခန်းများ
+<br>
+<br>
+// array function ဖြင့်လဲသုံးလို့ရ
+<br>
+<br>
+// array မှ data စစ်ထုတ်
+<br>
+<br>
+// methods တွေချိတ်သုံး
+<br>
+<br>
+// array ထည်းမှ အချက်အလက်များပေါင်းထုတ်
+
+<br>
+<br>
+
+
+<script>
+    let arr = ["banana", "orange", "Apple","Mango","Lemon"];
+    let numArr = [15,17,2,-3,6,2.1,100,3.5,0.5];
+    let apiData = [
+        {id:1,name:"mg mg",agge:14,room:"a",donate:350},
+        {id:2,name:"kyaw kyaw",agge:16,room:"c",donate:100},
+        {id:3,name:"Ko ko",agge:17,room:"b",donate:200},
+        {id:4,name:"Mya Mya",agge:18,room:"a",donate:150},
+        {id:5,name:"Hla Hla",agge:20,room:"c",donate:700},
+    ];
+
+    // let arr2 = apiData.map(function (el,index){
+    //     return {name:el.name,room:el.room};
+    // });
+    let arr2 =apiData.filter(el=>el.room === "a").map(el=>el.donate).reduce((x,y)=>x+y)
+    console.log(arr2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modal box</title>
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boostrap/css/all.css">
+</head>
+<body>
+
+<div class="my-3">
+    <button class="btn btn-primary" id="show">Show</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="bb" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis debitis molestiae sed temporibus voluptatibus. Ad corporis ea eos, non numquam possimus! Ab animi ea harum numquam officia officiis possimus voluptatum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis debitis molestiae sed temporibus voluptatibus. Ad corporis ea eos, non numquam possimus! Ab animi ea harum numquam officia officiis possimus voluptatum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis debitis molestiae sed temporibus voluptatibus. Ad corporis ea eos, non numquam possimus! Ab animi ea harum numquam officia officiis possimus voluptatum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis debitis molestiae sed temporibus voluptatibus. Ad corporis ea eos, non numquam possimus! Ab animi ea harum numquam officia officiis possimus voluptatum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis debitis molestiae sed temporibus voluptatibus. Ad corporis ea eos, non numquam possimus! Ab animi ea harum numquam officia officiis possimus voluptatum.
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="boostrap/js/jquery.min.js"></script>
+<script src="boostrap/js/bootstrap.min.js"></script>
+
+<Script>
+    $("#show").click(function (){
+        $("#bb").modal("show")
+    })
+
+</Script>
+</body>
+</html>

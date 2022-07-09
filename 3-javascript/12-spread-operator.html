@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spread Operator</title>
+</head>
+<body>
+
+<script>
+    //spread-operator
+    // let arr1 = [1,2,3,4,5];
+    // let arr2 = ["x","y","v"];
+    //
+    // let obj1 = {name:"Enn Ko",haveGirlFriend: 0};
+    // let obj2 = {age:23, job:"frontend developer"};
+    //
+    // let no = [12,34,800,-4,-150];
+    // let r = Math.max(...no);
+    // // let aa = arr1.concat(arr2);
+    // // let bb = [...arr1,...arr2];
+    // // let cc = {...obj1,status:false,...obj2};
+    // console.log(r);
+
+    //try
+    let x = {name:"EK",age:23,job:null};
+
+    try{
+        console.log("this is start");
+        if(x.job){
+            console.log(x);
+        }else{
+            throw new SyntaxError("no job");
+        }
+        // aa();
+        console.log("code end")
+    }catch (err){
+        console.error(err.message);
+    }finally {
+        console.log("code finally");
+    }
+
+</script>
+</body>
+</html>

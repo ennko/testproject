@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add</title>
+</head>
+<body>
+
+    <ul id="select">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+
+<script src="boostrap/js/jquery.min.js"></script>
+<script>
+    $("#select").append("<li>four</li>")
+    $("#select").append("<li>five</li>")
+
+    $("#select").prepend("<li>zero</li>")
+
+    $("#select").before("<p>This is before</p>")
+
+    $("#select").after("<p>This is after</p>")
+
+    $("#select").remove()
+
+
+
+
+</script>
+</body>
+</html>

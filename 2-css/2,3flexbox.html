@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          
+        }
+        
+        .bg-gray{
+            background-color: gray;
+        }
+        .bg-orange{
+            background-color: orange;
+        }
+        .bg-skyblue{
+            background-color: skyblue;
+        }
+        .one{
+            height: 50vh;
+            background-color: #f4f4f4;
+            display: flex;
+        
+        }
+        .part{
+         flex-grow: 1;
+        }
+
+        .part.right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;   
+        }
+        .two{
+            width: 990px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between; 
+            margin-top: -100px;
+            
+        }
+        .part-two{
+            text-align: center;
+            width: 300px;
+            padding: 30px 15px;
+            background-color: #fff;
+            box-shadow:0px 0px 25px #00000040 ;
+        }
+        .three{
+            width: 990px;
+            display: flex;
+            justify-content: center;
+            margin: 100px auto;
+        }
+        .part-three{
+            width: 500px;
+            text-align: center;
+        }
+        .four{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-four{
+            width:400px;
+           
+        }
+        .part-four{
+            width: 450px;
+            padding: 0 50px;
+        }
+        .five{
+            flex-direction: row-reverse;
+        }
+        .part-five{
+            text-align: right;
+        }
+        @media screen and (max-width:480px) {
+            .one,.two,.three,.four,.five{
+                flex-direction: column;
+            }
+            .two{
+                align-items: center;
+            }
+            section,div{
+               max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <section class="one">
+       <div class="part left bg-gray"></div>
+       <div class="part right bg-skyblue">
+          <div class="left-inder" style="width: 300px;"> 
+              <h1>This is Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rem placeat officia neque harum accusamus dolor optio in excepturi earum? Voluptas ipsa error alias voluptates animi, labore dolores libero neque!
+            </p>
+        </div>
+       </div>
+   </section>
+   <section class="two">
+       <div class="part-two">
+           <h1>This is one</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius fugiat officiis delectus similique rerum perspiciatis, quasi natus ullam nisi consectetur enim minima! Architecto, sunt corrupti illo repellat minima ad.</p>
+       </div>
+       <div class="part-two">
+           <h1>This is two</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cum nulla aspernatur rem explicabo quia quidem reiciendis sequi neque non dolor blanditiis soluta ad. Obcaecati a repellat dolore temporibus voluptatibus?</p>
+       </div>
+       <div class="part-two">
+           <h1>This is three</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos at quas quam. Ut libero, in provident debitis repudiandae amet, enim vel eveniet molestias, minima expedita consectetur magni placeat nam itaque.</p>
+       </div>
+   </section>
+   <section class="three">
+       <div class="part-three">
+           <h1>This is three</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam consectetur quae cumque distinctio adipisci? Facere exercitationem labore corporis voluptates minima. Eius, omnis. Modi quibusdam esse quis unde quam iste?</p>
+       </div>
+   </section>
+   <section class="four">
+    <img src="../enn ko.jpg" alt="" class="img-four">
+    <div class="part-four">
+        <h1>This is four</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi alias, necessitatibus hic minima inventore soluta dolorem! Ipsum tempora quisquam cupiditate voluptas, cum, mollitia quo repudiandae distinctio ab sed consectetur id?</p>
+    </div>
+   </section>
+   <section class="four five">
+    <img src="../enn ko.jpg" alt="" class="img-four">
+    <div class="part-four part-five ">
+        <h1>This is five</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi alias, necessitatibus hic minima inventore soluta dolorem! Ipsum tempora quisquam cupiditate voluptas, cum, mollitia quo repudiandae distinctio ab sed consectetur id?</p>
+    </div>
+   </section>
+</body>
+</html>

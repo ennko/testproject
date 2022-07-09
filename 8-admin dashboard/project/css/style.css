@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+:root{
+    --primary-soft: #f1f2f3;
+}
+.aside{
+    height: 100vh;
+    overflow: scroll;
+}
+
+
+.aside-bar{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.menu-bar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-title{
+    padding: 5px 0;
+    color: rgb(211, 211, 211);
+}
+
+.menu-item{
+   transition: 0.5s;
+}
+
+.menu-item:hover{
+    background-color: var(--primary-soft);
+    border-radius: 10px;
+}
+
+.menu-item-link.active{
+    background-color: var(--primary);
+    color: var(--white) !important;
+    border-radius: 10px;
+}
+
+.menu-item-link:hover{
+    text-decoration: none;
+    color: var(--dark);
+}
+.menu-item-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark);
+    padding: 5px ;
+}
+
+
+.menu-spacing{
+    padding: 5px 0;
+}
+.content{
+    background-color: var(--primary-soft);
+    overflow: scroll;
+    box-shadow: 0 0.125rem 0.125rem rgba(0,0,0,.075) inset;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+.show-aside-btn{
+    cursor: pointer;
+}
+
+.user-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.status-card{
+    transition: 0.3s;
+}
+
+.status-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,.02);
+}
+
+.status-card:active{
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,0,0,.02);
+}
+
+.ov-img{
+    margin-left: -25px;
+}
+
+.item-carousel{
+    margin-top: -100px;
+}
+
+.item-card-img{
+    width: 150px;
+    height: 200px;
+}
+
+.sub-li tr{
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+.sub-li tr:active{
+    transform: translateX(10px);
+}
+
+.full-screen-card{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2005;
+    overflow: scroll;
+}
+@media screen and (max-width:1024px) {
+    .aside{
+        height: 1024px;
+        overflow: scroll;
+    }
+    .content{
+        overflow: scroll;
+    }
+    .aside-end{
+        height: 250px;
+    }
+}
+    
+@media screen and (max-width: 780px){
+    .aside{
+        height: 100vh;
+        z-index: 2001;
+        position: fixed;
+        width: 250px;
+        display: block !important;
+        background-color: white ;
+        margin-left: -100%;
+    
+    }
+    .item-carousel-card{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:480px) {
+.aside-end{
+    height: 0px;
+}
+}

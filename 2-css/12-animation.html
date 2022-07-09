@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        .obj{
+            width: 100px;
+            height: 100px;
+            background: #00dbde;
+           animation: first 2s linear 3;
+            transform: translate(200px);
+
+
+        }
+        @keyframes first {
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="obj"></div>
+</body>
+</html>

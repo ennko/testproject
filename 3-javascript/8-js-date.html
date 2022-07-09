@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Date</title>
+    <style>
+        *{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h4>ချိန်ကိုက်ဗုံး</h4>
+<ul>
+    <li>SetTimeout(function,milliseconds)</li>
+    <li>clearTimeout(function)</li>
+</ul>
+<h4>အချိန်မှန်</h4>
+<ul>
+    <li>setInterval(function,milliseconds)</li>
+    <li>clearInterval(function)</li>
+</ul>
+<p id="output"></p>
+<button id="stop">stop</button>
+<script>
+    let d = new Date();
+    let output = document.getElementById("output");
+    output.innerHTML = `${d.getHours()} : ${d.getMinutes()} : ${d.getMilliseconds()}`
+    output.innerHTML += `<br>${d.toDateString()} `
+
+    let test = function (){
+        let d = new Date();
+        output.innerHTML = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`
+    }
+   let run = setInterval(test,1000);
+    document.getElementById("stop").addEventListener("click",function (){
+        clearInterval(run)
+    })
+
+
+</script>
+</body>
+</html>

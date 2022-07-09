@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basicshap</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            margin: 20px auto;
+        }
+        div{
+            display: inline-block;
+            margin: 10px;
+        }
+        .square{
+            width: 50px;
+            height: 50px;
+            border: 2px solid pink;
+
+        }
+        .square-rounded{
+            border-radius: 5px;
+        }
+        .rect{
+            width: 150px;
+            height: 50px;
+            border: 2px solid pink;
+
+        }
+        .circle{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background: #5d5d5a;
+        }
+        .imge{
+            background-image: url("image/my1.jpg");
+            background-size: 50px;
+        }
+        .bg-imge{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .triangle{
+            border: 50px solid white;
+            border-bottom-color: blue;
+        }
+        .triangle-right{
+            border: 50px solid white;
+            border-bottom-color: blue;
+            border-right-color: blue;
+        }
+        .envelop{
+            border: 50px solid #5a5a5a;
+            border-top-color: #03a9f4;
+            border-bottom-width: 20px;
+        }
+        .arrow{
+            width: 150px;
+            height: 50px;
+            background: #00dbde;
+        }
+        .arrow::after{
+            content: "";
+            border: 25px solid white;
+            position: absolute;
+            left: 150px;
+            border-left-color: #00dbde;
+            border-right-width: 0;
+        }
+        .arrow::before{
+            content: "";
+            border: 25px solid #00dbde;
+            position: absolute;
+            border-left-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>HTML,CSS SHAPE</h1>
+    <div class="square"></div>
+    <div class="square square-rounded"></div>
+    <div class="rect"></div>
+    <hr>
+
+    <div class="circle"></div>
+    <div class="circle imge"></div>
+    <img  class="bg-imge" src="image/anime2.jpg" alt="">
+    <hr>
+
+    <div class="triangle"></div>
+    <div class="triangle-right"></div>
+    <div class="envelop"></div>
+    <hr>
+
+    <div class="arrow"></div>
+
+</body>
+</html>

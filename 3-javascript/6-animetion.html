@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/fontawesome-free/css/all.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .room{
+            width: 600px;
+            height: 500px;
+            background-image: url(../image/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .lu-div{
+            position: absolute;
+            top: 170px;
+            left: 190px;
+        }
+        .lu{
+            width: 100px;
+        }
+        .boy{
+            transform: translateX(-100px);
+            animation: toLeft 5s;
+        }
+        .girl{
+            transform: translateX(100px);
+            animation: toRight 5s;
+        }
+        .fas{
+           font-size: 70px;
+            color: red;
+            position: absolute;
+            top: 290px;
+            left: 270px;
+            animation: slice 4s ;
+        }
+        .fa-img{
+            width: 100%;
+            height: 100%;
+            animation: aa 6s;
+            position: absolute;
+            top: 0;
+        }
+        @keyframes slice {
+            0%{
+                top: 500px
+            }
+            20%{
+                top:290px;
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(60deg);
+            }
+            60%{
+                transform: rotate(0deg);
+            }
+            70%{
+                transform: rotate(60deg);
+            }
+            80%{
+                transform: rotate(0deg);
+            }
+            90%{
+                transform: rotate(60deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes toLeft {
+            0%{
+                transform: translateX(0);
+            }
+            80%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100px);
+            }
+        }
+        @keyframes toRight {
+            0%{
+                transform: translateX(0);
+            }
+            80%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(100px);
+            }
+        }
+        @keyframes aa {
+            0%{
+                top: 500px;
+            }
+            80%{
+                top: 500px;
+            }
+            100%{
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="room">
+  <div class="lu-div">
+      <img class="lu boy" src="../image/anime7.jpg" alt="">
+      <img class="lu girl" src="../image/anime6.jpg" alt="">
+  </div>
+    <i class="fas fa-long-arrow-alt-up"></i>
+    <div class="fa">
+        <img src="../image/my2.jpg"  class="fa-img" alt="">
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

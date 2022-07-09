@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Budding & Capturing & Declaration</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #out{
+            margin: 10px;
+        }
+        button{
+            margin: 10px;
+            padding: 10px;
+        }
+
+
+        /*#top{*/
+        /*    width: 500px;*/
+        /*    margin: 100px auto;*/
+        /*    padding: 30px;*/
+        /*    background: #eee;*/
+        /*}*/
+        /*#mid{*/
+        /*    padding: 50px;*/
+        /*    background: #dddddd;*/
+        /*}*/
+        /*#last{*/
+        /*    padding: 100px;*/
+        /*    background: #ccc;*/
+        /*}*/
+        /*div:hover{*/
+        /*    border: 1px solid black;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--    <div id="top">-->
+<!--        <div id="mid">-->
+<!--            <div id="last">-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+        <h4>Event declaration</h4>
+        <button onclick="showList()">ShowList</button>
+        <ul id="out"></ul>
+    <script>
+        // budding
+        // function run(x){
+        //     return console.log(`I'm ${x} get out`)
+        // }
+        //capturing
+        // document.getElementById("top").addEventListener("click",function (){
+        //     run("1top");
+        // },true);
+        // document.getElementById("mid").addEventListener("click",function (){
+        //     run("2mid");
+        // },true);
+        // document.getElementById("last").addEventListener("click",function (){
+        //     run("3last");
+        // },true);
+        //
+        // function run(x){
+        //     return console.log(`I'm ${x} management `)
+        // }
+        //Declaration
+        let out = document.getElementById("out");
+        let arr = ["orange","apple","mango","banana","lemon","strawberry"];
+
+        let addLi = function addLi(x){
+            let li = document.createElement("li");
+            let content = document.createTextNode(x);
+            li.appendChild(content);
+            out.appendChild(li);
+        }
+        function showList(){
+            arr.map(function (el){
+                addLi(el);
+            });
+        }
+
+        // let li = document.querySelectorAll("li");
+        // li.forEach((x)=>{
+        //     x.addEventListener("click",_=>{
+        //         console.log(x.innerHTML)
+        //     })
+        // })
+        out.addEventListener("click",(e)=>{
+            let current = e.target;
+            console.log(current.innerHTML);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New loop</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 300px;
+        }
+        .card{
+            width: 100%;
+        }
+        .card-img{
+            width: 100%;
+        }
+        .title{
+
+        }
+        .description{
+
+        }
+        .author{
+
+        }
+        .url{
+
+        }
+    </style>
+</head>
+<body>
+<div class="news">
+
+</div>
+<script src="../newapi.js"></script>
+<script>
+console.log(Data)
+let articles =Data.articles;
+let news = document.querySelector(".news");
+
+    articles.map(function (el,index){
+        console.log(el)
+        news.innerHTML += `
+                   <div class="card">
+                <img src="${el.urlToImage}" alt="" class="card-img">
+                <h4 class="title">${el.title}</h4>
+                <small class="author">${el.author}</small>
+                <p class="description">${el.description}</p>
+                <a href="${el.url}" class="url">Read more</a>
+                 </div>
+        `;
+    })
+</script>
+</body>
+</html>

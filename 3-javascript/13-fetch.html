@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 300px;
+        }
+        .card{
+            width: 100%;
+        }
+        .card-img{
+            width: 100%;
+        }
+        .title{
+
+        }
+        .description{
+
+        }
+        .author{
+
+        }
+        .url{
+
+        }
+    </style>
+</head>
+<body>
+<p id="con"></p>
+<div class="news">
+</div>
+<script>
+    let con = document.getElementById("con");
+        con.innerHTML = `<img src="https://c.tenor.com/TGQu0qigTgQAAAAj/colorful-loading.gif">`;
+    fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=44e1b56ccb424746beebf2501756a421')
+    .then(response=>response.json())
+    .then(data=> {
+        let articles = data.articles;
+        let news = document.querySelector(".news");
+        // console.log(data)
+        con.innerHTML = ''
+        articles.map(function (el,index){
+            console.log(el)
+            news.innerHTML += `
+                   <div class="card">
+                <img src="${el.urlToImage}" alt="" class="card-img">
+                <h4 class="title">${el.title}</h4>
+                <small class="author">${el.author}</small>
+                <p class="description">${el.description}</p>
+                <a href="${el.url}" class="url">Read more</a>
+                 </div>
+        `;
+        })
+    })
+
+</script>
+</body>
+</html>

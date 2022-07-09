@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aimation3</title>
+    <style>
+        .obj{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #a75a55;
+            border: 5px solid #ff253a;
+            border-color: #00dbde #ff253a;
+            transform: translate(900px,500px);
+            animation: test 5s linear;
+        }
+        @keyframes test {
+            0%{
+                transform: translate(-300px,-500px);
+            }
+            20%{
+                transform: translate(300px,500px);
+            }
+            40%{
+                transform: translate(400px,150px);
+            }
+            70%{
+                transform: translate(500px,500px);
+            }
+            80%{
+                transform: translate(550px,350px);
+            }
+            90%{
+                transform: translate(600px,500px);
+            }
+
+            100%{
+                transform: translate(900px,500px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="obj"></div>
+</body>
+</html>

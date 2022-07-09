@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VenoBox</title>
+    <link rel="stylesheet" href="vendor/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/venobox/venobox.css">
+</head>
+<body>
+<div class="container ">
+    <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="card">
+              <div class="row ">
+                  <div class="my-5">
+                      <a href="image/images/poe-portrait-1.jpg" data-gall="aa" class="aa "><img src="image/images/poe-square-1.jpg" class="img-fluid" alt=""></a>
+                  </div>
+                  <div class="my-5">
+                      <a href="image/images/poe-portrait-2.jpg" data-gall="aa" class="aa "><img src="image/images/poe-square-2.jpg" class="img-fluid" alt=""></a>
+                  </div>
+                  <div class="my-5">
+                      <a href="image/images/poe-portrait-3.jpg" data-gall="aa" class="aa "><img src="image/images/poe-square-3.jpg" class="img-fluid" alt=""></a>
+                  </div>
+                  <div class="my-5">
+                      <a href="image/images/poe-portrait-4.jpg" data-gall="aa" class="aa "><img src="image/images/poe-square-4.jpg" class="img-fluid" alt=""></a>
+                  </div>
+                  <div class="my-5">
+                      <a href="image/images/poe-portrait-5.jpg" data-gall="aa" class="aa "><img src="image/images/poe-square-5.jpg" class="img-fluid" alt=""></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+<script src="vendor/boostrap/js/bootstrap.min.js"></script>
+<script src="vendor/boostrap/js/jquery.min.js"></script>
+<script src="vendor/venobox/venobox.min.js"></script>
+<script>
+$(document).ready(function (){
+    $('.aa').venobox({
+        framewidth: '400px',
+        frameheight: 'auto',
+        border:'5px',
+        bgColor:'#f5f5f5',
+        spinner: 'wave',
+        titleattr: 'data-title',
+        numeratio: true,
+        infinigall: true,
+        share : ['facebook','twitter','download'],
+        navKeyboard: true
+    })
+})
+</script>
+</body>
+</html>

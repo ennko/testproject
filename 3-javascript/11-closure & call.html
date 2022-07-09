@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure & Call Function</title>
+</head>
+<body>
+
+<script>
+    //closure function
+     // function aa(){
+     //     console.log("this is aa");
+     //     function aaa(){
+     //         console.log("this is aaa");
+     //     }
+     //     aaa()
+     // };
+     //
+     // function bb(x,y){
+     //     let z = x*y;
+     //     function bbb(z){
+     //         console.log("this is "+ z);
+     //     };
+     //     bbb(z);
+     // };
+     //
+     // function cc(x){
+     //     let input = "this is input -"+ x;
+     //     return function (){
+     //         console.log(input);
+     //     }
+     // };
+
+     //callback function
+
+    // function aa(x){
+    //     console.log("this is final result "+x);
+    // };
+    // function cc(x,y,callback){
+    //     let z = x*y;
+    //     callback(z);
+    // }
+    // cc(3,4,aa)
+    //
+    // function meet(name){
+    //     alert("Hello "+name);
+    // };
+    // function moment(callback){
+    //     let name = prompt("Place fill Your Name");
+    //     callback(name);
+    // };
+    // moment(meet);
+
+    function aa(x){
+        alert('Hello ' + x);
+    };
+    function dd(x,y,callback){
+        let z = 'this is '+(x+y);
+        callback(z);
+    };
+    dd(3,5,aa);
+
+</script>
+</body>
+</html>

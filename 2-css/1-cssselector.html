@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        div p{
+            background-color: yellow;
+        }
+        p[title="one"]{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1 in the div</p>
+        <p>Paragraph 2 in the div</p>
+        <section><p>Paragraph 3 in the div</p></section>
+    </div>
+
+    <p title="two">Paragraph 4 Not in div</p>
+    <p title="one">Paragraph 5 Not in div</p>
+</body>
+</html>

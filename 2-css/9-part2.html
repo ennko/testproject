@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSSCOLUMN2</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .heading{
+            color: #00dbde;
+            font-size: 3em;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .gallery{
+            columns: 3 300px;
+            column-gap: 30px;
+            width: 1000px;
+            margin: auto;
+        }
+        .gallery img{
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .gallery img:hover{
+            filter: contrast(150%);
+        }
+       @media screen and (max-width: 1024px) {
+           .gallery{
+               width: 90%;
+           }
+       }
+
+        @media screen and (max-width: 480px) {
+            .gallery{
+                columns: 2 150px;
+                column-gap: 15px;
+            }
+            .gallery img{
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="heading"><span style="color: #5d5d5a">My</span> Gallery</div>
+<div class="gallery">
+    <img src="image/anime1.jpg" alt="">
+    <img src="image/anime2.jpg" alt="">
+    <img src="image/anime3.jpg" alt="">
+    <img src="image/anime4.jpg" alt="">
+    <img src="image/anime5.jpg" alt="">
+    <img src="image/anime7.jpg" alt="">
+    <img src="image/anime6.jpg" alt="">
+    <img src="image/my1.jpg" alt="">
+    <img src="image/my2.jpg" alt="">
+    <img src="image/my3.jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css</title>
+    <style>
+        .fonText{
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<p id="p" class="one two three">This is p tag</p>
+<button id="change">Change</button>
+<script src="boostrap/js/jquery.min.js"></script>
+<script>
+    $("#change").click(function (){
+        let p =$("#p").attr("class")
+        console.log(p)
+        }
+    )
+</script>
+</body>
+</html>

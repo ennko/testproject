@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Note</title>
+
+    <link rel="stylesheet" href="vendor/summer_note/summernote-lite.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="aa"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./vendor/boostrap/js/jquery.min.js"></script>
+    <script src="./vendor/summer_note/summernote-lite.min.js"></script>
+    <script>
+         $('.aa').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 500,
+        toolbar:[
+
+['style', ['bold', 'italic', 'underline', 'clear']],
+['font', ['strikethrough', 'superscript', 'subscript']],
+['fontsize', ['fontsize']],
+['color',['color']],
+['insert',['link','picture','video']]
+
+]
+});
+    
+  
+    </script>
+</body>
+</html>

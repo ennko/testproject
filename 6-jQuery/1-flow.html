@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flow</title>
+    <style>
+        .obj{
+            width: 300px;
+            height: 100px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<button class="hide">Hide</button>
+<button class="show">Show</button>
+<button class="toggle">Toggle</button>
+<button class="to">To</button>
+ <div class="obj" ></div>
+
+
+ <script src="boostrap/js/jquery.min.js"></script>
+
+ <script>
+     $(".hide").click(function (){
+         $(".obj").slideUp(1000,function (){
+             console.log ("up to slide")
+         })
+     });
+
+    $(".show").click(function (){
+        $(".obj").slideDown(1000)
+    });
+    $(".toggle").click(function (){
+        $(".obj").slideToggle(1000)
+    });
+
+    $(".to").click(function (){
+        $(".obj").fadeTo(1000,0.5)
+    })
+ </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Point</title>
+    <link rel="stylesheet" href="vendor/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/animate-it/animate.css">
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Section 1</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Section 2</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vh-100" id="three">
+        <div class="row justify-content-center align-items-center bg-primary h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Section 3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vh-100" id="four">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Section 4</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Section 5</h1>
+            </div>
+        </div>
+    </div>
+<script src="./vendor/boostrap/js/jquery.min.js"></script>
+<script src="./vendor/boostrap/js/bootstrap.min.js"></script>
+<script src="./vendor/way_point/jquery.waypoints.js"></script>
+<script src="./vendor/wow/wow.js"></script>
+<script>
+    wow = new WOW(
+            {
+                boxClass: 'wow',
+                animateClass: 'animate__animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            }
+        )
+        wow.init();
+        let aa = $('#three').waypoint(function(direction){
+            if(direction=="down"){
+                $('.navbar').removeClass("bg-primary")
+                $('.navbar').addClass("bg-warning")
+            }else{
+                $('.navbar').removeClass("bg-warning")
+                $('.navbar').addClass("bg-primary") 
+            }
+            
+                // $('.navbar').toggleClass("bg-primary").toggleClass("bg-warning");
+        
+        },{
+            offset: "10%"
+        });
+        let bb = $('#four').waypoint(function(direction){
+            if(direction == "down"){
+                $('.navbar').removeClass("bg-warning")
+                $('.navbar').addClass("bg-primary") 
+            }else{
+                $('.navbar').removeClass("bg-primary")
+                $('.navbar').addClass("bg-warning")
+            }
+            // $('.navbar').toggleClass("bg-primary").toggleClass("bg-warning");
+        },{
+            offset: "10%"
+        })
+</script>
+</body>
+</html>

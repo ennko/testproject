@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tooltip/popover/dropdown</title>
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boostrap/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 vh-100">
+                <p class="my-5 w-50">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis cumque distinctio eum exercitationem fugiat hic itaque laudantium maiores minus, nesciunt nulla pariatur quae ratione rem, reprehenderit saepe sapiente sequi.
+                </p>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                    Popover on top
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+                    Popover on right
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                    Popover on bottom
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="min gar lar">
+                    Popover on left
+                </button>
+                <br>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+
+        </div>
+    </div>
+<script src="boostrap/js/jquery.min.js"></script>
+<script src="boostrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        $(function (){
+            $('[data-bs-toggle="tooltip"]').tooltip()
+        })
+        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // $(function (){
+        //     $('[data-bs-toggle="popover"]').popover({
+        //         trigger: 'focus'
+        //     })
+        // })
+        let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        let popoverList = popoverTriggerList.map(function (e) {
+            return new bootstrap.Popover(e,{
+                trigger: 'focus'
+            })
+        })
+    </script>
+</body>
+</html>

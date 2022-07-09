@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boostrap/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card mt-5">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="uname">Your Name</label>
+                                <input type="text" name="username" id="uname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="passward">Passward</label>
+                                <input type="text" name="passward" id="passward" class="form-control">
+                            </div>
+                           <div class="form-group">
+                               <label for="exampleFromControlSelect1">Example Simple</label>
+                               <select class="form-select" id="exampleFromControlSelect1" >
+                                   <option >Zero</option>
+                                   <option >One</option>
+                                   <option >Two</option>
+                                   <option >Three</option>
+                               </select>
+                           </div>
+                            <div class="form-group">
+                                <label for="forControlRange" class="d-block">Range</label>
+                                <input type="range" class="form-control-range w-100" id="forControlRange">
+                            </div>
+                            <div class="form-group">
+                                <label for="customRange3" class="form-label">Example range</label>
+                                <input type="range" class="form-range"  id="customRange3">
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <input class="custom-file-input" type="file" id="formFile">
+                                    <label for="formFile" class="custom-file-lable">Browser</label>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <label for="flexCheckDefault" class="d-block">Gender</label>
+                                    <input class="custom-control-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="custom-control-input" for="flexCheckDefault">
+                                       Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Female
+                                    </label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="flexCheckDefault" class="d-block">Gender</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      male
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <button class="btn btn-primary float-end">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="boostrap/js/jquery.min.js"></script>
+<script src="boostrap/js/bootstrap.min.js"></script>
+</body>
+</html>
